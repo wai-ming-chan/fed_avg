@@ -1,0 +1,9 @@
+data/MNIST/raw
+.ipynb_checkpoints
+
+# vi backups
+*~
+
+# development
+.vscode
+**/.DS_Store
