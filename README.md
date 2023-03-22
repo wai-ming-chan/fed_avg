@@ -1,6 +1,9 @@
 # fed_avg
 Demo programs to run Federated Average Learning.
 
+Can run the Centralized training with convergence result:
+  * sanityCheck_MNIST.ipynb
+
 Can run but not converge:
   * [Qua]_Federated_Learning.ipynb
   
