@@ -244,7 +244,7 @@ if False:
 
 # ### Some model hyperparameters setting
 
-# In[ ]:
+# In[7]:
 
 
 # model parameters setting (will affect performance of the model)
@@ -301,8 +301,8 @@ for t in range(epochs):
     lossTT_vals.append(loss_test_t)
     accu_vals.append(accu_t)
 
-#   if t % 10 == 0:
-    print(f"[epoch: {t}\t Train loss: {loss_train_t:>7f}, Accuracy: {(100*accu_t):>0.1f}%, Test loss: {loss_test_t:>8f} ")
+    if t % 10 == 0:
+        print(f'[epoch: {t}\t Train loss: {loss_train_t:>7f}, Accuracy: {(100*accu_t):>0.1f}%, Test loss: {loss_test_t:>8f} ')
 
 # plt.plot(np.linspace(1, epochs,epochs).astype(int), loss_vals)
 # plt.plot(np.linspace(1, epochs,epochs).astype(int), loss_vals)
@@ -314,6 +314,7 @@ plt.plot(lossTR_vals,label="train")
 plt.xlabel("iterations")
 plt.ylabel("Loss")
 plt.legend()
+plt.savefig('Loss.png')
 plt.show()
 
 plt.figure(figsize=(10,5))
@@ -321,14 +322,9 @@ plt.title("Test Data Accuracy")
 plt.plot(accu_vals)
 plt.xlabel("iterations")
 plt.ylabel("Accuracy")
+plt.savefig('Accuracy.png')
 # plt.legend()
 plt.show()
-
-
-# In[ ]:
-
-
-
 
 
 # In[ ]:
